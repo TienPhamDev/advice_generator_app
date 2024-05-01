@@ -5,7 +5,7 @@ async function getData() {
   const res = await fetch(api_url)
   const data = await res.json()
   adviceIdEl.textContent = data.slip.id
-  adviceEl.innerHTML = `<quote>${data.slip.advice}</quote>`
+  adviceEl.innerHTML = `"<quote>${data.slip.advice}</quote>"`
 }
 
 getData()

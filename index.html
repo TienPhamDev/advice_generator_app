@@ -15,17 +15,50 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      position:fixed;
+      bottom:0;
+      width:100%;
     }
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+    body{
+      background-color: var(--darkBlue);
+    }
+    .container {
+      margin:10rem auto;
+      width: 360px;
+      background-color: var(--darkGrayishBlue);
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      
+    }
+    :root{
+      --lightCyan: hsl(193, 38%, 86%);
+      --neonGreen: hsl(150, 100%, 66%);
+      --grayishBlue: hsl(217, 19%, 38%);
+      --darkGrayishBlue: hsl(217, 19%, 24%);
+      --darkBlue: hsl(218, 23%, 16%);
+    }
+    .advice-header {
+      text-align: center;
+      color: var(--neonGreen);
+      font-size:0.9rem;
+    }
+    .advice-text{
+      text-align: center;
+      color: var(--lightCyan);
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    Advice #<span class="advice-id"><!-- Advice ID goes here --></span>
+    <h1 class="advice-header">ADVICE #<span class="advice-id"><!-- Advice ID goes here --></span></h1>
     <p class="advice-text"></p>
   </div>
   <div class="attribution">
