@@ -1,9 +1,11 @@
-const adviceEl = document.querySelector('.advice');
+const adviceEl = document.querySelector('.advice-text')
+const adviceIdEl = document.querySelector('.advice-id')
 const api_url = `https://api.adviceslip.com/advice`
 async function getData() {
   const res = await fetch(api_url)
   const data = await res.json()
-  adviceEl.textContent = data.slip.advice
+  adviceIdEl.textContent = data.slip.id
+  adviceEl.innerHTML = `" <quote>${data.slip.advice}</quote> "`
 }
 
 getData()
